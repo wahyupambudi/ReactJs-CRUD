@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+import axios from '../../axios'
 import { Link } from "react-router-dom";
 
 class Siswa extends Component {
@@ -20,7 +20,7 @@ class Siswa extends Component {
       token: token
     };
     axios
-      .get("https://expres789.herokuapp.com/siswas", { headers })
+      .get("/siswas", { headers })
       .then(res => {
         this.setState({ siswa: res.data.data });
       })
@@ -33,7 +33,7 @@ class Siswa extends Component {
       token: token
     };
     axios
-      .delete(`https://expres789.herokuapp.com/siswas/${id}`, { headers })
+      .delete(`/siswas/${id}`, { headers })
       .then(res => {
         this.getInitialData();
         this.setState({ message: `Berhasil Menghapus Data dengan Id ${id}` });        

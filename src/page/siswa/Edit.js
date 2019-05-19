@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import axios from "axios";
+import axios from '../../axios'
+
 
 class SiswaEdit extends Component {
   constructor() {
@@ -22,7 +23,7 @@ class SiswaEdit extends Component {
     };
     const siswaId = this.props.match.params.id;
     axios
-      .get(`https://expres789.herokuapp.com/siswas/${siswaId}`, {headers})
+      .get(`/siswas/${siswaId}`, {headers})
       .then(res => {
         console.log(res);
         const { nama, alamat, kelas } = res.data.data;
@@ -48,7 +49,7 @@ class SiswaEdit extends Component {
     const siswaId = this.props.match.params.id;
     const { nama, alamat, kelas } = this.state;
     axios
-      .put(`https://expres789.herokuapp.com/siswas/${siswaId}`, { nama, alamat, kelas }, {headers})
+      .put(`/siswas/${siswaId}`, { nama, alamat, kelas }, {headers})
       .then(res => {
         console.log(res);
         this.props.history.push("/siswa");

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+import axios from '../../axios'
 
 class SiswaCreate extends Component {
   constructor() {
@@ -24,7 +24,7 @@ class SiswaCreate extends Component {
     };
     const { nama, alamat, kelas } = this.state;
     axios
-      .post("https://expres789.herokuapp.com/siswas", { nama, alamat, kelas }, {headers})
+      .post("/siswas", { nama, alamat, kelas }, {headers})
       .then(res => {
         console.log(res);
         this.setState({ message: "Berhasil Menambahkan Data" });        
