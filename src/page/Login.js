@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+import axios from "../axios";
 
 class Login extends Component {
   constructor() {
@@ -16,21 +16,23 @@ class Login extends Component {
   };
 
   handleSubmit = e => {
-    e.preventDefault();
+  
 
     const { username, password } = this.state;
     axios
-      .post("https://expres789.herokuapp.com/users/login", { username, password })
+      .post("/users/login", { username, password })
       .then(res => {
         console.log(res.data.data.token);
         const token = res.data.data.token;
         localStorage.setItem("token", token);
-        this.props.history.push("/")
+        // this.props.history.push("/siswa")
+        return (window.location = "/siswa");
       })
       .catch(err => {
         console.log(err);
         this.setState({ message: "Pastikan Username & Password Benar" });
       });
+        e.preventDefault();
   };
 
   render() {
