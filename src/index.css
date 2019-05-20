@@ -20,13 +20,14 @@ code {
 
 #edit2 {
   text-align: center;
-  background:linear-gradient(to right, red, rgb(88, 194, 88));
+  background: linear-gradient(to right, red, rgb(88, 194, 88));
   color: white;
   margin-left: 25%;
   margin-right: 20%;
   margin-top: 20px;
   width: 50%;
-  height: 60px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  height: 20%;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 3px 3px 10px 3px green;
 }
