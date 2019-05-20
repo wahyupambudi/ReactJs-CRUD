@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 class Navbar extends Component {
   render() {
     const token = localStorage.getItem("token");
-    console.log(token);
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <Link className="navbar-brand" to="#">
-          Navigasi
+        <Link className="navbar-brand" to="/">
+          React Express CRUD
         </Link>
         <button
           className="navbar-toggler"
