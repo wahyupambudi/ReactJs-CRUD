@@ -34,10 +34,12 @@ class Navbar extends Component {
                 Siswa
               </Link>
             </li>
+          </ul>
+          <ul className="nav navbar-nav ml-auto">
             {!token && (
               <li className="nav-item">
                 <Link className="nav-link" to="/login">
-                  Login
+                  <button className="btn btn-primary">Login</button>
                 </Link>
               </li>
             )}
@@ -45,11 +47,10 @@ class Navbar extends Component {
             {token && (
               <li className="nav-item">
                 <Link className="nav-link" to="/logout">
-                  Logout
+                <button className="btn btn-danger">Logout</button>
                 </Link>
               </li>
-            )}
-          </ul>
+            )}</ul>
         </div>
       </nav>
     );
