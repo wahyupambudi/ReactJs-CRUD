@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://expres789.herokuapp.com/";
+const url = "http://localhost:3000";
 
 export default axios.create({
   baseURL: url

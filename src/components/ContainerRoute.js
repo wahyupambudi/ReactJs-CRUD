@@ -4,6 +4,7 @@ import SiswaIndex from "../page/siswa/Index";
 import SiswaCreate from "../page/siswa/Create";
 import SiswaEdit from "../page/siswa/Edit";
 import Login from "../page/Login";
+import Register from "../page/Register";
 import Logout from "../page/Logout"
 import { Route } from "react-router-dom";
 
@@ -12,6 +13,7 @@ const ContainerRoute = () => {
     <div className="container">
       <Route path="/" exact component={Home} />
       <Route path="/Login" exact component={Login} />
+      <Route path="/Register" exact component={Register} />
       <Route path="/Logout" exact component={Logout} />
       <Route path="/siswa" exact component={SiswaIndex} />
       <Route path="/siswa/create" exact component={SiswaCreate} />
